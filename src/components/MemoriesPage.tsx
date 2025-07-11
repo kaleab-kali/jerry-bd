@@ -6,7 +6,7 @@ interface Memory {
   title: string
   subtitle: string
   content: string
-  type: 'screenshot' | 'poem' | 'quote' | 'moment'
+  type: 'screenshot' | 'poem' | 'quote' | 'moment' | 'specialNote'
   image: string
 }
 
@@ -51,19 +51,16 @@ export function MemoriesPage() {
     { id: 28, title: "Your Back", subtitle: "Pillar of Strength", content: "Your back stands straight with pride and grace,\nCarrying you through time and space,\nIt bends to help but never breaks,\nShows the strength that it takes,\nTo be someone others can lean on,\nFrom early dusk to early dawn.", type: "poem", image: "images/back.jpg" },
     { id: 29, title: "Your Waist", subtitle: "Perfect Curves", content: "Your waist creates the perfect line,\nWhere strength and beauty intertwine,\nIt sways when music fills the air,\nMoving without a single care,\nEmbracing all your body's story,\nCelebrating natural glory.", type: "poem", image: "images/hand.png" },
     { id: 30, title: "Your Hips", subtitle: "Rhythm of Life", content: "Your hips don't lie, they speak the truth,\nOf confidence and endless youth,\nThey sway to rhythms all their own,\nIn ways that make themselves known,\nCarrying you with style and grace,\nThrough every moment, every place.", type: "poem", image: "images/hips.mp4" },
-    { id: 31, title: "Your Legs", subtitle: "Journey Makers", content: "Your legs have carried you so far,\nTo reach each dream, each distant star,\nThey dance, they run, they stand their ground,\nIn them, such strength is found,\nEvery step a choice you make,\nEvery path yours to take.", type: "poem", image: "https://images.unsplash.com/photo-1519235106638-30cc49b5dbc3?w=400&h=300&fit=crop" },
-    { id: 32, title: "Your Knees", subtitle: "Flexibility & Faith", content: "Your knees that bend in prayer and play,\nHelping you navigate each day,\nThey've knelt in love and risen strong,\nCarried you when roads were long,\nFlexible in body and in spirit,\nStrength that all can hear it.", type: "poem", image: "https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?w=400&h=300&fit=crop" },
-    { id: 33, title: "Your Ankles", subtitle: "Delicate Strength", content: "Your ankles, delicate yet strong,\nHelp you dance to life's sweet song,\nThey pivot, turn, and help you stand,\nNavigating shifting sand,\nAdorned sometimes with chains so bright,\nCatching every ray of light.", type: "poem", image: "https://images.unsplash.com/photo-1515555230216-82228b88ea98?w=400&h=300&fit=crop" },
-    { id: 34, title: "Your Feet", subtitle: "Adventure Seekers", content: "Your feet have walked a thousand miles,\nThrough valleys deep and mountain trials,\nThey tap when happy, still when thinking,\nNever from adventure shrinking,\nPainted toes or bare and free,\nThey take you where you need to be.", type: "poem", image: "images/feet.jpeg" },
-    { id: 35, title: "Your Toes", subtitle: "Little Dancers", content: "Ten little toes that wiggle with glee,\nWhen sand and ocean set them free,\nThey curl when cozy, stretch when waking,\nPart of every step you're taking,\nSmall but mighty, cute and sweet,\nMaking you complete from head to feet.", type: "poem", image: "https://images.unsplash.com/photo-1515376721779-7db6951da88d?w=400&h=300&fit=crop" },
-    { id: 36, title: "Your Skin", subtitle: "Beautiful Canvas", content: "Your skin tells stories of your days,\nIn freckles, marks, in countless ways,\nSoft to touch, warm to hold,\nMore precious than the finest gold,\nIt glows with health and inner light,\nRadiant morning, noon, and night.", type: "poem", image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=300&fit=crop" },
-    { id: 37, title: "Your Voice", subtitle: "Melody of Life", content: "Your voice, a song I love to hear,\nWhether whispered soft or loud and clear,\nIt carries laughter, dreams, and thought,\nWith wisdom that can't be taught,\nEach word you speak, a note so sweet,\nMaking life's symphony complete.", type: "poem", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop" },
-    { id: 38, title: "Your Laugh", subtitle: "Pure Joy", content: "Your laughter fills the room with light,\nFrom giggles soft to loud delight,\nThe way you throw your head back free,\nIs how joy was meant to be,\nInfectious, pure, and unrestrained,\nIn your laugh, happiness contained.", type: "poem", image: "https://images.unsplash.com/photo-1482361046637-0226fdcfa3b7?w=400&h=300&fit=crop" },
-    { id: 39, title: "Your Mind", subtitle: "Brilliant Universe", content: "Your mind's a universe of thought,\nWith wisdom that cannot be bought,\nQuick wit and intelligence combine,\nWith creativity divine,\nYou solve and dream and wonder why,\nYour brilliance reaching for the sky.", type: "poem", image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&h=300&fit=crop" },
-    
-    { id: 40, title: "Kitchen Disaster", subtitle: "The Great Cooking Fail", content: "Remember when you tried to bake,\nAnd made that unforgettable mistake?\nSalt instead of sugar in the cake,\nWe laughed until our bellies ached!\nYour face when you took that first bite,\nTurned our kitchen fail into pure delight!", type: "moment", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" },
-    { id: 41, title: "Dance Floor Queen", subtitle: "That Wedding Night", content: "You said you couldn't dance at all,\nThen owned that wedding party hall!\nYour moves were... uniquely yours,\nSliding across those polished floors,\nThe 'shopping cart' became your fame,\nNow it's your signature dance name!", type: "moment", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop" },
-    { id: 42, title: "Future Together", subtitle: "Forever & Always", content: "Your future shines so crystal clear,\nAnd I'm blessed to be here,\nWatching you grow and achieve each dream,\nYou're more amazing than you seem,\nHappy Birthday to my favorite person,\nMay your light never stop burning!", type: "poem", image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=400&h=300&fit=crop" }
+    { id: 31, title: "Your Legs", subtitle: "Journey Makers", content: "Your legs have carried you so far,\nTo reach each dream, each distant star,\nThey dance, they run, they stand their ground,\nIn them, such strength is found,\nEvery step a choice you make,\nEvery path yours to take.", type: "poem", image: "images/leg.jpeg" }, 
+    { id: 32, title: "Your Feet", subtitle: "Adventure Seekers", content: "Your feet have walked a thousand miles,\nThrough valleys deep and mountain trials,\nThey tap when happy, still when thinking,\nNever from adventure shrinking,\nPainted toes or bare and free,\nThey take you where you need to be.", type: "poem", image: "images/feet.jpeg" },
+    { id: 33, title: "Your Skin", subtitle: "Beautiful Canvas", content: "Your skin tells stories of your days,\nIn freckles, marks, in countless ways,\nSoft to touch, warm to hold,\nMore precious than the finest gold,\nIt glows with health and inner light,\nRadiant morning, noon, and night.", type: "poem", image: "images/skin.mp4" },
+    { id: 34, title: "Your Voice", subtitle: "Melody of Life", content: "Your voice, a song I love to hear,\nWhether whispered soft or loud and clear,\nIt carries laughter, dreams, and thought,\nWith wisdom that can't be taught,\nEach word you speak, a note so sweet,\nMaking life's symphony complete.", type: "poem", image: "images/voice.mp4" },
+    { id: 35, title: "Your Laugh", subtitle: "Pure Joy", content: "Your laughter fills the room with light,\nFrom giggles soft to loud delight,\nThe way you throw your head back free,\nIs how joy was meant to be,\nInfectious, pure, and unrestrained,\nIn your laugh, happiness contained.", type: "poem", image: "images/laugh.jpeg" },
+    { id: 36, title: "Your Mind", subtitle: "Brilliant Universe", content: "Your mind's a universe of thought,\nWith wisdom that cannot be bought,\nQuick wit and intelligence combine,\nWith creativity divine,\nYou solve and dream and wonder why,\nYour brilliance reaching for the sky.", type: "poem", image: "images/1.jpg" },
+    { id: 37, title: "TikTok Drafts - Part 1", subtitle: "The Unseen Comedy", content: "Remember those hilarious TikTok drafts you never posted? The world missed out on some pure comedic gold!", type: "moment", image: "images/freak.MP4" },
+    { id: 38, title: "TikTok Drafts - Part 2", subtitle: "Behind the Scenes Laughter", content: "Another gem from the drafts! Your raw, unedited humor is always the best kind of laughter.", type: "moment", image: "images/100.mp4" },
+    { id: 39, title: "TikTok Drafts - Part 3", subtitle: "Masterpiece in the Making", content: "Before it hit the cutting room floor, this TikTok draft was a true work of art. So many laughs!", type: "moment", image: "images/freak.MP4" },
+    { id: 40, title: "Our Journey So Far", subtitle: "2 Years, 1 Month, 24 Days", content: "My dearest, the past 2 years, 1 month, and 24 days with you have painted the most beautiful canvas of my life. Every silly moment, every gentle fight, every shared tear, and every burst of laughter has woven itself into a tapestry of memories I wouldn't trade for the world. Thank you for making every single day a precious gift. My heart overflows with gratitude for our journey, and I cherish every step we've taken, together. Happy Birthday, my love.", type: "specialNote", image: "" }
   ]
 
   const nextSlide = () => {
@@ -94,7 +91,7 @@ export function MemoriesPage() {
 
   return (
     <div className="h-full bg-gradient-to-br from-pink-50 to-purple-100 overflow-hidden">
-      <div className="h-full flex flex-col p-4 pb-0">
+      <div className="h-full flex flex-col p-4 pb-20">
         {/* Header */}
         <div className="text-center mb-2">
           <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
@@ -104,85 +101,97 @@ export function MemoriesPage() {
         </div>
 
         {/* Card Container */}
-        <div className="flex-1 flex items-center justify-center px-4 pb-4">
+        <div className="flex-1 flex items-center justify-center px-4 pb-4 mt-6">
           <div
-            className="w-full max-w-md md:max-w-4xl h-full max-h-[500px] md:max-h-[450px] relative"
+            className="w-full max-w-md md:max-w-4xl h-full relative"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            {/* Memory Card - Fixed Height Design */}
+            {/* Memory Card - Fixed Height Design has been updated to be dynamic */}
             <div className="bg-white rounded-2xl shadow-xl h-full overflow-hidden animate-fade-in">
-              {/* Mobile: Vertical Layout, Desktop: Horizontal Layout */}
-              <div className="h-full flex flex-col md:flex-row">
-                {/* Image Section - Fixed Dimensions */}
-                <div className="h-2/5 md:h-full md:w-1/2 relative overflow-hidden bg-gray-100">
-                  {(currentMemory.image.endsWith('.mp4') || currentMemory.image.endsWith('.MP4')) ? (
-                    <video
-                      src={currentMemory.image}
-                      controls
-                      playsInline
-                      loop
-                      autoPlay
-                      muted
-                      className="absolute inset-0 w-full h-full object-contain bg-black"
-                    />
-                  ) : (
-                    <img 
-                      src={currentMemory.image} 
-                      alt={currentMemory.title}
-                      className="absolute inset-0 w-full h-full object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop';
-                      }}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/30 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-4 right-4 md:hidden">
-                    <h3 className="text-xl font-bold text-white drop-shadow-lg">{currentMemory.title}</h3>
-                    <p className="text-sm text-white/90 drop-shadow">{currentMemory.subtitle}</p>
+              {currentMemory.type === 'specialNote' ? (
+                // Special Note Card UI (Full Width, Centered Text, No Image, No Scrolling)
+                <div className="h-full w-full flex flex-col items-center justify-center p-4 md:p-6 bg-gradient-to-br from-pink-100 to-purple-100">
+                  {/* Only the main content for special note card - removed title/subtitle */}
+                  <div className="max-w-sm md:max-w-lg mx-auto p-4 md:p-6 bg-white rounded-2xl shadow-md flex-grow flex items-center justify-center">
+                    <p className="text-gray-800 whitespace-pre-line text-xs md:text-sm leading-relaxed font-semibold font-serif italic text-center animation-heartbeat">
+                      {currentMemory.content}
+                    </p>
                   </div>
                 </div>
-
-                {/* Content Section - Fixed Height */}
-                <div className="h-3/5 md:h-full md:w-1/2 p-4 md:p-6 flex flex-col justify-center bg-gradient-to-b md:bg-gradient-to-br from-white to-gray-50 overflow-y-auto">
-                  {/* Desktop Title (hidden on mobile) */}
-                  <div className="hidden md:block mb-4 text-center">
-                    <h3 className="text-xl font-bold text-gray-800">{currentMemory.title}</h3>
-                    <p className="text-sm text-gray-500 mt-1">{currentMemory.subtitle}</p>
+              ) : (
+                // Standard Card UI (Two Columns: Image + Content)
+                <div className="h-full flex flex-col md:flex-row">
+                  {/* Image Section - Fixed Dimensions */}
+                  <div className="h-2/5 md:h-full md:w-1/2 relative overflow-hidden bg-gray-100 flex-shrink-0">
+                    {(currentMemory.image.endsWith('.mp4') || currentMemory.image.endsWith('.MP4')) ? (
+                      <video
+                        src={currentMemory.image}
+                        controls
+                        playsInline
+                        loop
+                        autoPlay
+                        muted
+                        className="absolute inset-0 w-full h-full object-contain bg-black"
+                      />
+                    ) : (
+                      <img 
+                        src={currentMemory.image} 
+                        alt={currentMemory.title}
+                        className="absolute inset-0 w-full h-full object-contain"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop';
+                        }}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/30 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-3 left-4 right-4 md:hidden">
+                      <h3 className="text-xl font-bold text-white drop-shadow-lg">{currentMemory.title}</h3>
+                      <p className="text-sm text-white/90 drop-shadow">{currentMemory.subtitle}</p>
+                    </div>
                   </div>
-                  
-                  <div className="text-center w-full">
-                    {currentMemory.type === 'screenshot' && (
-                      <div className="bg-gray-100 rounded-xl p-4 md:p-5 max-w-sm mx-auto">
-                        <p className="text-gray-700 whitespace-pre-line text-sm leading-relaxed">
-                          {currentMemory.content}
-                        </p>
-                      </div>
-                    )}
+
+                  {/* Content Section - Fixed Height has been updated to be dynamic */}
+                  <div className="h-3/5 md:h-full md:w-1/2 p-4 md:p-6 flex flex-col justify-center bg-gradient-to-b md:bg-gradient-to-br from-white to-gray-50 overflow-y-auto">
+                    {/* Desktop Title (hidden on mobile) */}
+                    <div className="hidden md:block mb-4 text-center">
+                      <h3 className="text-xl font-bold text-gray-800">{currentMemory.title}</h3>
+                      <p className="text-sm text-gray-500 mt-1">{currentMemory.subtitle}</p>
+                    </div>
                     
-                    {currentMemory.type === 'poem' && (
-                      <div className="max-w-sm md:max-w-md mx-auto">
-                        <FaQuoteLeft className="text-pink-300 text-lg md:text-xl mx-auto mb-2 md:mb-3" />
-                        <p className="text-gray-700 whitespace-pre-line text-sm leading-relaxed font-serif italic">
-                          {currentMemory.content}
-                        </p>
-                      </div>
-                    )}
-                    
-                    {currentMemory.type === 'moment' && (
-                      <div className="max-w-sm md:max-w-md mx-auto">
-                        <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-4 md:p-5">
+                    <div className="text-center w-full">
+                      {currentMemory.type === 'screenshot' && (
+                        <div className="bg-gray-100 rounded-xl p-4 md:p-5 max-w-sm mx-auto">
                           <p className="text-gray-700 whitespace-pre-line text-sm leading-relaxed">
                             {currentMemory.content}
                           </p>
                         </div>
-                      </div>
-                    )}
+                      )}
+                      
+                      {currentMemory.type === 'poem' && (
+                        <div className="max-w-sm md:max-w-md mx-auto">
+                          <FaQuoteLeft className="text-pink-300 text-lg md:text-xl mx-auto mb-2 md:mb-3" />
+                          <p className="text-gray-700 whitespace-pre-line text-sm leading-relaxed font-serif italic">
+                            {currentMemory.content}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {currentMemory.type === 'moment' && (
+                        <div className="max-w-sm md:max-w-md mx-auto">
+                          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-4 md:p-5">
+                            <p className="text-gray-700 whitespace-pre-line text-sm leading-relaxed">
+                              {currentMemory.content}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Navigation Buttons */}
