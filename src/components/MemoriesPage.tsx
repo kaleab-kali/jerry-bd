@@ -52,7 +52,7 @@ export function MemoriesPage() {
     { id: 31, title: "Your Legs", subtitle: "Journey Makers", content: "Your legs have carried you so far,\nTo reach each dream, each distant star,\nThey dance, they run, they stand their ground,\nIn them, such strength is found,\nEvery step a choice you make,\nEvery path yours to take.", type: "poem", image: "images/leg.jpeg" }, 
     { id: 32, title: "Your Feet", subtitle: "Adventure Seekers", content: "Your feet have walked a thousand miles,\nThrough valleys deep and mountain trials,\nThey tap when happy, still when thinking,\nNever from adventure shrinking,\nPainted toes or bare and free,\nThey take you where you need to be.", type: "poem", image: "images/feet.jpeg" },
     { id: 33, title: "Your Skin", subtitle: "Beautiful Canvas", content: "Your skin tells stories of your days,\nIn freckles, marks, in countless ways,\nSoft to touch, warm to hold,\nMore precious than the finest gold,\nIt glows with health and inner light,\nRadiant morning, noon, and night.", type: "poem", image: "images/skin.mp4" },
-    { id: 34, title: "Your Voice", subtitle: "Melody of Life adn funniest voice ever 😂", content: "Your voice, a song I love to hear,\nWhether whispered soft or loud and clear,\nIt carries laughter, dreams, and thought,\nWith wisdom that can't be taught,\nEach word you speak, a note so sweet,\nMaking life's symphony complete.", type: "poem", image: "images/voice.mp4" },
+    { id: 34, title: "Your Voice", subtitle: "Melody of Life and funniest voice ever 😂", content: "Your voice, a song I love to hear,\nWhether whispered soft or loud and clear,\nIt carries laughter, dreams, and thought,\nWith wisdom that can't be taught,\nEach word you speak, a note so sweet,\nMaking life's symphony complete.", type: "poem", image: "images/voice.mp4" },
     { id: 35, title: "Your Laugh", subtitle: "Pure Joy", content: "Your laughter fills the room with light,\nFrom giggles soft to loud delight,\nThe way you throw your head back free,\nIs how joy was meant to be,\nInfectious, pure, and unrestrained,\nIn your laugh, happiness contained.", type: "poem", image: "images/laugh.jpeg" },
     { id: 36, title: "Your Mind", subtitle: "Brilliant Universe", content: "Your mind's a universe of thought,\nWith wisdom that cannot be bought,\nQuick wit and intelligence combine,\nWith creativity divine,\nYou solve and dream and wonder why,\nYour brilliance reaching for the sky.", type: "poem", image: "images/1.jpg" },
     { id: 37, title: "TikTok Drafts - Part 1", subtitle: "The Unseen Comedy", content: "Remember those hilarious TikTok drafts you never posted? The world missed out on some pure comedic gold!", type: "moment", image: "images/freak.MP4" },
@@ -100,6 +100,11 @@ export function MemoriesPage() {
               ) : (
                 // Standard Card UI (Two Columns: Image + Content)
                 <div className="h-full flex flex-col md:flex-row">
+                  {/* Mobile Title (above image/video, only on mobile) */}
+                  <div className="md:hidden mb-2 text-center py-2">
+                    <h3 className="text-xl font-bold text-gray-800">{currentMemory.title}</h3>
+                    <p className="text-sm text-gray-500 mt-1">{currentMemory.subtitle}</p>
+                  </div>
                   {/* Image Section - Fixed Dimensions */}
                   <div className="h-2/5 md:h-full md:w-1/2 relative overflow-hidden bg-gray-100 flex-shrink-0">
                     {(currentMemory.image.endsWith('.mp4') || currentMemory.image.endsWith('.MP4')) ? (
@@ -109,6 +114,7 @@ export function MemoriesPage() {
                         playsInline
                         loop
                         autoPlay
+                      
                         className="absolute inset-0 w-full h-full object-contain bg-black"
                       />
                     ) : (
@@ -123,10 +129,7 @@ export function MemoriesPage() {
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/30 to-transparent pointer-events-none" />
-                    <div className="absolute bottom-3 left-4 right-4 md:hidden">
-                      <h3 className="text-xl font-bold text-white drop-shadow-lg">{currentMemory.title}</h3>
-                      <p className="text-sm text-white/90 drop-shadow">{currentMemory.subtitle}</p>
-                    </div>
+                    {/* Removed mobile overlay title/subtitle at bottom */}
                   </div>
 
                   {/* Content Section - Fixed Height has been updated to be dynamic */}
