@@ -1,0 +1,333 @@
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1) rotateY(15deg) rotateX(-10deg);
+  }
+  25% {
+    transform: scale(1.1) rotateY(15deg) rotateX(-10deg);
+  }
+  50% {
+    transform: scale(0.95) rotateY(15deg) rotateX(-10deg);
+  }
+  75% {
+    transform: scale(1.05) rotateY(15deg) rotateX(-10deg);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Confetti Animation */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-confetti {
+  animation: confetti 3s ease-in forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out 0.5s both;
+}
+
+/* 3D Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Continuous Confetti Animation */
+@keyframes confetti-continuous {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-confetti-continuous {
+  animation: confetti-continuous linear infinite;
+}
+
+/* Gift Opening Animations */
+@keyframes gift-open {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+@keyframes box-lid {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+  100% {
+    transform: translateY(-20px) rotateX(-45deg);
+    opacity: 0;
+  }
+}
+
+.animate-gift-open {
+  animation: gift-open 0.8s ease-in-out;
+}
+
+.animate-box-lid {
+  animation: box-lid 0.8s ease-out forwards;
+  transform-origin: top center;
+}
+
+/* Balloon Float Animation */
+@keyframes float-balloon {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(-120vh) translateX(-20px) rotate(-5deg);
+  }
+}
+
+.animate-float-balloon {
+  animation: float-balloon linear infinite;
+}
+
+/* Message Animations */
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-in {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flip-in {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 0.6s ease-out;
+}
+
+.animate-slide-right {
+  animation: slide-right 0.6s ease-out;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.6s ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.8s ease-out;
+}
+
+.animate-rotate-in {
+  animation: rotate-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.6s ease-out;
+}
+
+.animate-flip-in {
+  animation: flip-in 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out;
+}
+
+/* Spin Slow Animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Custom Tailwind v4 utilities */
+@layer utilities {
+  .transform-gpu {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
