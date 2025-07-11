@@ -17,12 +17,12 @@ export function GiftPage() {
   const [selectedGift, setSelectedGift] = useState<Gift | null>(null)
 
   const gifts: Gift[] = [
-    { id: 1, color: 'from-pink-400 to-pink-600', size: 'large', content: 'Box of Premium Chocolates', emoji: '🍫' },
+    { id: 1, color: 'from-pink-400 to-pink-600', size: 'large', content: 'Box of Premium custom Chocolates', emoji: '🍫' },
     { id: 2, color: 'from-purple-400 to-purple-600', size: 'medium', content: 'Travel to Arcades Adventure', emoji: '🎮' },
-    { id: 3, color: 'from-blue-400 to-blue-600', size: 'medium', content: 'Spa Day Experience', emoji: '💆' },
-    { id: 4, color: 'from-yellow-400 to-yellow-600', size: 'small', content: 'Concert Tickets', emoji: '🎵' },
-    { id: 5, color: 'from-green-400 to-green-600', size: 'large', content: 'Weekend Getaway Trip', emoji: '✈️' },
-    { id: 6, color: 'from-red-400 to-red-600', size: 'small', content: 'Gourmet Dinner for Two', emoji: '🍽️' }
+    { id: 3, color: 'from-blue-400 to-blue-600', size: 'medium', content: 'Any wish you have(open to you)', emoji: '💆' },
+    { id: 4, color: 'from-yellow-400 to-yellow-600', size: 'small', content: 'surprise gift box', emoji: '🎵' },
+    { id: 5, color: 'from-green-400 to-green-600', size: 'large', content: 'Frienship park visit', emoji: '✈️' },
+    { id: 6, color: 'from-red-400 to-red-600', size: 'small', content: 'special lunch', emoji: '🍽️' }
   ]
 
   const handleGiftClick = (gift: Gift) => {
