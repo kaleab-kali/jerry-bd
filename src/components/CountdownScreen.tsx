@@ -87,7 +87,7 @@ const getAllImageUrls = (): string[] => {
 }
 
 export function CountdownScreen() {
-  const { count, startCountdown, isComplete, loadingProgress, setLoadingProgress } = useCountdown()
+  const { count, startCountdown,  loadingProgress, setLoadingProgress } = useCountdown()
   const hasStarted = useRef(false)
   const [isExpanding, setIsExpanding] = useState(false)
   const { preloadMedia, progress } = useImagePreloader()

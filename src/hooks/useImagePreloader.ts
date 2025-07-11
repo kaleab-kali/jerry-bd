@@ -36,6 +36,9 @@ export function useImagePreloader() {
         resolve() // Resolve anyway to continue loading others
       }
       img.src = src
+      if (reject() == null){
+
+      }
     })
   }
 

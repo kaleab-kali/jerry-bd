@@ -225,11 +225,11 @@ export function Heart3D({ count, isExpanding = false, loadingProgress = 0 }: Hea
                   }}>
                     {loadingProgress}%
                   </div>
-                  <div className="text-xs text-white/90 font-medium" style={{
+                  {/* <div className="text-xs text-white/90 font-medium" style={{
                     textShadow: '0 0 10px rgba(255,255,255,0.8)'
                   }}>
                     Loading memories...
-                  </div>
+                  </div> */}
                 </div>
               ) : (
                 <span 
