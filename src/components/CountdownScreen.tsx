@@ -4,7 +4,7 @@ import { Heart3D } from './Heart3D'
 import { useRef, useState } from 'react'
 
 export function CountdownScreen() {
-  const { count, startCountdown, isComplete } = useCountdown()
+  const { count, startCountdown, } = useCountdown()
   const hasStarted = useRef(false)
   const [isExpanding, setIsExpanding] = useState(false)
 

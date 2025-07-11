@@ -1,4 +1,4 @@
-import { FaChevronLeft, FaChevronRight, FaHeart, FaStar, FaQuoteLeft } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa'
 import { useState, useRef } from 'react'
 
 interface Memory {
