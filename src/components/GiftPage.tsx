@@ -53,7 +53,7 @@ export function GiftPage() {
             Special Gifts For You!
           </h2>
           <p className="text-lg text-gray-600">
-            Click on the gifts to open them 🎁
+          Please say yesss for old time’s sake 🎁🙄 😭
           </p>
         </div>
 
